@@ -1,0 +1,51 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+   }
+
+   label {
+    display: block;
+    margin-top: 12px;
+   }
+
+   .flex {
+    display: flex;
+   }
+
+   input[type='text'],
+   input[type='email'],
+   input[type='password'],
+   select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+   }
+
+   input[type='radio']{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+   }
+
+   input[type='submit'] {
+    background-color: #0095ff;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+   }
+
+   input[type='checkbox'] {
+    margin-top: 15px;
+    margin-left: 5px;
+   }
+
+   .profession-error{
+    color: red;
+   }
