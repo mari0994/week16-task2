@@ -98,8 +98,6 @@ form.addEventListener('submit', function(event){
         consentError.style.display = 'none';
     }
 
-
-//вывод в консоль значений
 const age = form.elements.age;
 
 console.log(userName.value);
