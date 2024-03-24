@@ -1,21 +1,3 @@
-//выражерие для имени 
-// /^[a-zA-Z\s]*$/
-
-//выраение для пароля 
-// /(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/
-
-//обработкий сабмит 
-//отменить ейтсвие по умолчанию ()
-//отражать сообзение об ошике рядом с каждым полем 
-
-//доделать                                           (см чат гпт) для кнопки неактивной, попробовать использовать колбэк
-//непраивльынй формат выдает когда я вводу праивльный из-за атрибута - почему?
-
-//кнопка отправик неактивна, пока поя не заполненыв правильно и не удет отмеесен чпекокс согалсия с уловиями 
-// если все праивльно, в консаоль вывести значнеия полей и очистит форму 
-
-// доп - обраотчики событи focus и blur длч каждлого поля
-
 const form = document.forms.form;
 const submitButton = form.elements.submitButton;
 
@@ -28,7 +10,8 @@ userName.addEventListener('input', function(){
         userNameErrorMessage.textContent = 'Имя должно содержать только буквы и пробелы';
         userNameErrorMessage.style.color = 'red';
         //submitButton.disabled = true;
-        //почему не работает верхняя строчка?
+        //submitButton.setAttribute('disabled');
+        //почему не работают верхние строчки?
     } else if (userName.value.length < 2){
         userNameErrorMessage.textContent = 'Слишком короткое имя';
         userNameErrorMessage.style.color = 'red';
@@ -41,7 +24,7 @@ userName.addEventListener('input', function(){
         userNameErrorMessage.style.display = 'none';
         //submitButton.disabled = false;
     }
-})
+}) //на практике не очень хорошо работает, тк сообщение почему-то не всегда появляется сразу, не всегда исчезает, если исправить ошибку, иногда появляется не то сообщение и также не появляется сообщение о том что слишком длинное имя, даже если ввести более 20 символов
 
 const email = form.elements.email;
 email.addEventListener('input', function(){
@@ -122,10 +105,14 @@ const age = form.elements.age;
 console.log(userName.value);
 console.log(email.value);
 console.log(age.value);
-// which radio selected console.log(radio??);
+if(radioFemale.checked){
+    console.log('Женщина');
+} else if(radioMale.checked){
+    console.log('Мужчина');
+}
 console.log(profession.value);
 console.log(password.value);
 console.log(passwordConfirm.value);
-//form.reset();
+form.reset();
 })
 
